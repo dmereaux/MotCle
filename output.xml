@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-22T21:07:54.647170" rpa="false" schemaversion="5">
+<suite id="s1" name="MotCle" source="C:\TP\MotCle">
+<suite id="s1-s1" name="Prestashop" source="C:\TP\MotCle\Prestashop.robot">
+<test id="s1-s1-t1" name="Test page accueil" line="12">
+<kw name="Ouvrir Prestashop" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-22T21:07:54.945134" level="INFO">Opening browser 'GC' to base url 'http://www.qualifiez.fr/monPrestashop2/prestashop/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-22T21:07:54.944871" elapsed="3.493034"/>
+</kw>
+<status status="PASS" start="2026-01-22T21:07:54.944149" elapsed="3.494291"/>
+</kw>
+<kw name="Aller a la page d'accueil">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOC_LOGO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-01-22T21:07:58.440017" elapsed="0.084780"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-22T21:07:58.526184" level="INFO">Clicking element 'xpath=//*[@id="_desktop_logo"]//a/img'.</msg>
+<arg>${LOC_LOGO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-22T21:07:58.525104" elapsed="1.871298"/>
+</kw>
+<status status="PASS" start="2026-01-22T21:07:58.439610" elapsed="1.956986"/>
+</kw>
+<kw name="Verifier titre page monPrestashop" source_name="verifier titre page ${titre}">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-22T21:08:00.405125" level="INFO">Page title is 'monPrestashop'.</msg>
+<arg>${titre}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-01-22T21:08:00.398953" elapsed="0.006265"/>
+</kw>
+<status status="PASS" start="2026-01-22T21:08:00.397101" elapsed="0.008229"/>
+</kw>
+<kw name="Fermer Prestashop" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-22T21:08:00.405896" elapsed="2.199705"/>
+</kw>
+<status status="PASS" start="2026-01-22T21:08:00.405653" elapsed="2.200639"/>
+</kw>
+<status status="PASS" start="2026-01-22T21:07:54.943470" elapsed="7.663658"/>
+</test>
+<status status="PASS" start="2026-01-22T21:07:54.685437" elapsed="7.924383"/>
+</suite>
+<status status="PASS" start="2026-01-22T21:07:54.648919" elapsed="7.963539"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="MotCle" id="s1" pass="1" fail="0" skip="0">MotCle</stat>
+<stat name="Prestashop" id="s1-s1" pass="1" fail="0" skip="0">MotCle.Prestashop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
